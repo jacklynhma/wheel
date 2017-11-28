@@ -1,0 +1,60 @@
+.pie {
+  position: relative;
+  margin: 1em auto;
+  border: solid black 1px;
+  padding: 0;
+  width: 32em; height: 32em;
+  border-radius: 50%;
+  list-style: none;
+}
+.slice {
+  overflow: hidden;
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%; height: 50%;
+  transform-origin: 0% 100%;
+}
+.slice:first-child {
+  transform: skewY(360deg);
+}
+.slice:nth-child(2) {
+  transform: rotate(72deg) skewY(360deg);
+}
+.slice:nth-child(3) {
+  transform: rotate(147deg) skewY(360deg);
+}
+.slice:nth-child(4) {
+  transform: rotate(219deg) skewY(360deg);
+}
+.slice:nth-child(5) {
+  transform: rotate(291deg) skewY(360deg);
+}
+
+.slice-contents {
+  position: absolute;
+  left: -100%;
+  width: 200%; height: 200%;
+  border-radius: 50%;
+}
+.first {
+  background-color: rgb(176, 49, 21);
+}
+.second {
+  background-color: rgb(249, 160, 44);
+}
+.third {
+  background-color: rgb(198, 179, 9);
+}
+.fourth {
+  background-color: rgb(17, 51, 170);
+}
+.fifth {
+  background-color: rgb(8, 186, 122);
+
+}
+/*.slice:first-child .slice-contents {
+  transform: skewY(22.5deg);  unskew slice contents
+}*/
+.slice:hover .slice-contents { background: violet; } /* highlight on hover */
+
+/*credits to https://stackoverflow.com/a/14185845  http://dabblet.com/gist/3912488  https://codepen.io/thebabydino/pen/hkxGp */
